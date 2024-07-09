@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import sklearn
+from category_encoders import CatBoostEncoder
 
 sklearn.set_config(transform_output="pandas")
 
@@ -14,7 +15,7 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown('Pipeline с использованием модели voting classifier')
+    st.markdown('Pipeline с использованием модели **voting classifier**')
 with col3:
     st.metric(label='Cross-val accuracy', value=0.8747)
 
